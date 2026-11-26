@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\World;
 use App\Models\Activity;
 use App\Models\User;
+use App\Models\Question;
 use Illuminate\Http\Request;
 
 class WorldManagementController extends Controller
@@ -16,6 +17,7 @@ class WorldManagementController extends Controller
             'total_users' => User::count(),
             'total_worlds' => World::count(),
             'total_activities' => Activity::count(),
+            'total_questions' => Question::count(),
         ]);
     }
 public function index(Request $request)
